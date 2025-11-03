@@ -1,0 +1,29 @@
+{
+  "name": "Airflow Pipeline (CLI Dev)",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "airflow-cli",
+  "workspaceFolder": "/opt/airflow",
+  "runServices": [
+    "db",
+    "redis",
+    "airflow-init",
+    "airflow-apiserver",
+    "airflow-scheduler",
+    "airflow-dag-processor",
+    "airflow-worker"
+  ],
+  "overrideCommand": true,
+  "shutdownAction": "stopCompose",
+  "forwardPorts": [8080, 5433, 5555],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  }
+}
