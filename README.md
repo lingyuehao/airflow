@@ -1,4 +1,3 @@
-
 # Airflow Data Pipeline
 
 ## Overview
